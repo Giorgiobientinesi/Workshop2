@@ -177,11 +177,7 @@ if start==True:
     row['cancellation_policy'] = row['cancellation_policy'].map({'Strict': 0, 'Moderately Flexible': 1, "Flexible": 2})
     # GET PREDICTIONS
 
-    import pickle
-    # model=pickle.load(open("Airbnb-Workshop.sav","rb"))
-    from joblib import dump, load
 
-    model = load('Airbnb.joblib')
 
     pred = model.predict(row)
 
