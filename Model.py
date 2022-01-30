@@ -46,11 +46,9 @@ pred = model.predict(X_test)
 
 mean_absolute_error(y_test, pred)
 
-import pickle
 
-filename = 'Airbnb.sav'
-pickle.dump(model, open(filename, 'wb'))
-
+from joblib import dump, load
+dump(model, 'Airbnb.joblib')
 
 
 
